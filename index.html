@@ -7,10 +7,19 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
       <h1>Password Strength Checker</h1>
 
+      <!-- User Information -->
+      <input type="text" id="fullname" placeholder="Full Name" />
+
+      <input type="email" id="email" placeholder="Email Address" />
+
+      <input type="text" id="username" placeholder="Username" />
+
+      <!-- Password -->
       <div class="input-group">
         <div class="password-wrapper">
           <input
@@ -25,34 +34,43 @@
         <button id="copy-btn">⧉</button>
       </div>
 
+      <!-- Confirm Password -->
+      <input
+        type="password"
+        id="confirm-password"
+        placeholder="Confirm Password"
+      />
+
+      <!-- Password Strength -->
       <div class="strength-container">
         <div class="strength-bar" id="strength-bar"></div>
       </div>
 
       <p id="strength-text">Strength: None</p>
 
+      <!-- Password Requirements -->
       <div class="requirements">
         <p id="length">✖ Minimum 8 characters</p>
-
         <p id="uppercase">✖ Uppercase letter</p>
-
         <p id="lowercase">✖ Lowercase letter</p>
-
         <p id="number">✖ Number</p>
-
         <p id="special">✖ Special character</p>
       </div>
 
+      <!-- Security Tips -->
       <div class="tips">
         <h3>Security Tips</h3>
 
         <ul>
-          <li>Avoid using your name</li>
-          <li>Do not use common passwords</li>
-          <li>Use symbols and numbers</li>
-          <li>Make passwords longer</li>
+          <li>Avoid using your name.</li>
+          <li>Do not use common passwords.</li>
+          <li>Use uppercase, lowercase, numbers and symbols.</li>
+          <li>Make your password at least 12 characters long.</li>
         </ul>
       </div>
+
+      <!-- Register Button -->
+      <button id="register-btn">Create Account</button>
     </div>
 
     <script src="script.js"></script>
