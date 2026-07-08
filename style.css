@@ -15,7 +15,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 
-  background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 
   display: flex;
   justify-content: center;
@@ -30,26 +30,16 @@ body {
 =========================== */
 
 .container {
-  width: 450px;
+  width: 500px;
   max-width: 100%;
 
-  background: rgba(255, 255, 255, 0.96);
+  background: white;
 
-  padding: 35px;
+  padding: 30px;
 
-  border-radius: 18px;
+  border-radius: 15px;
 
-  box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.18),
-    0 5px 15px rgba(0, 0, 0, 0.08);
-
-  border: 1px solid rgba(255, 255, 255, 0.4);
-
-  transition: transform 0.3s ease;
-}
-
-.container:hover {
-  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
 }
 
 /* ===========================
@@ -58,14 +48,15 @@ body {
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-
-  font-size: 26px;
 
   color: #1e3a8a;
+
+  margin-bottom: 25px;
 }
 
 h3 {
+  color: #1e3a8a;
+
   margin-bottom: 10px;
 }
 
@@ -73,252 +64,365 @@ h3 {
    INPUTS
 =========================== */
 
-.container > input,
-.password-wrapper input {
+.container > input {
   width: 100%;
 
-  padding: 13px 15px;
+  padding: 12px;
 
   margin-bottom: 15px;
 
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
+  border: 1px solid #ccc;
 
-  background: #fafafa;
+  border-radius: 6px;
 
   font-size: 15px;
 
-  transition: all 0.3s ease;
-}
-
-.password-wrapper input {
-  padding-right: 75px;
+  transition: .3s;
 }
 
 .container > input:focus,
 .password-wrapper input:focus {
-  outline: none;
 
-  background: white;
+  outline: none;
 
   border-color: #2563eb;
 
-  box-shadow: 0 0 10px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 0 5px rgba(37,99,235,.3);
+
 }
 
 /* ===========================
-   PASSWORD INPUT
+   PASSWORD AREA
 =========================== */
 
-.input-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.input-group{
 
-  margin-bottom: 15px;
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:15px;
+
 }
 
-.password-wrapper {
-  position: relative;
-  flex: 1;
+.password-wrapper{
+
+    position:relative;
+
+    flex:1;
+
 }
 
-.password-wrapper input {
-  width: 100%;
+.password-wrapper input{
 
-  padding: 12px 70px 12px 12px;
+    width:100%;
 
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    padding:12px 70px 12px 12px;
 
-  font-size: 16px;
+    border:1px solid #ccc;
 
-  transition: 0.3s;
+    border-radius:6px;
+
+    font-size:15px;
+
 }
 
 /* ===========================
-   SHOW BUTTON
+   SHOW BUTTONS
 =========================== */
 
-#toggle-btn {
-  position: absolute;
+#toggle-btn,
+#confirm-toggle-btn{
 
-  right: 12px;
-  top: 50%;
+    position:absolute;
 
-  transform: translateY(-50%);
+    right:10px;
 
-  background: none;
+    top:50%;
 
-  border: none;
+    transform:translateY(-50%);
 
-  color: #2563eb;
+    border:none;
 
-  font-weight: bold;
+    background:none;
 
-  cursor: pointer;
+    color:#2563eb;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
 }
 
 /* ===========================
    COPY BUTTON
 =========================== */
 
-#copy-btn {
-  padding: 10px 12px;
+#copy-btn{
 
-  border: none;
-  border-radius: 8px;
+    width:48px;
 
-  background: #2563eb;
+    height:45px;
 
-  color: white;
+    border:none;
 
-  cursor: pointer;
+    border-radius:6px;
 
-  font-size: 18px;
+    background:#2563eb;
 
-  transition: 0.3s;
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 }
 
-#copy-btn:hover {
-  background: #1d4ed8;
+#copy-btn:hover{
+
+    background:#1d4ed8;
+
 }
 
 /* ===========================
    STRENGTH BAR
 =========================== */
 
-.strength-container {
-  width: 100%;
-  height: 10px;
+.strength-container{
 
-  margin-top: 15px;
+    width:100%;
 
-  background: #ddd;
+    height:10px;
 
-  border-radius: 5px;
+    background:#ddd;
 
-  overflow: hidden;
+    border-radius:10px;
+
+    margin-top:10px;
+
+    overflow:hidden;
+
 }
 
-.strength-bar {
-  width: 0%;
-  height: 100%;
+.strength-bar{
 
-  background: red;
+    width:0%;
 
-  border-radius: 5px;
+    height:100%;
 
-  transition:
-    width 0.3s ease,
-    background-color 0.3s ease;
+    background:red;
+
+    transition:.3s;
+
 }
 
-#strength-text {
-  margin-top: 10px;
+#strength-text{
 
-  text-align: center;
+    text-align:center;
 
-  font-weight: bold;
+    margin-top:10px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   SECURITY ANALYSIS
+=========================== */
+
+.analysis{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:#eef5ff;
+
+    border-left:5px solid #2563eb;
+
+    border-radius:8px;
+
+}
+
+#analysis-message{
+
+    line-height:1.6;
+
+    font-size:14px;
+
+    color:#333;
+
 }
 
 /* ===========================
    REQUIREMENTS
 =========================== */
 
-.requirements {
-  margin-top: 20px;
+.requirements{
+
+    margin-top:20px;
+
 }
 
-.requirements p {
-  margin: 8px 0;
-  font-size: 14px;
+.requirements p{
+
+    margin:8px 0;
+
+    font-size:14px;
+
 }
 
-.valid {
-  color: green;
+.valid{
+
+    color:green;
+
 }
 
-.invalid {
-  color: red;
+.invalid{
+
+    color:red;
+
 }
 
 /* ===========================
    SECURITY TIPS
 =========================== */
 
-.tips {
-  margin-top: 20px;
+.tips{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:#f8f9fa;
+
+    border-radius:8px;
+
 }
 
-.tips h3 {
-  margin-bottom: 10px;
+.tips ul{
+
+    padding-left:20px;
+
 }
 
-.tips ul {
-  padding-left: 20px;
-}
+.tips li{
 
-.tips li {
-  margin-bottom: 6px;
-  font-size: 14px;
+    margin-bottom:8px;
+
+    font-size:14px;
+
 }
 
 /* ===========================
-   REGISTER BUTTON
+   BUTTON
 =========================== */
 
-#register-btn {
-  width: 100%;
+#register-btn{
 
-  margin-top: 20px;
-  padding: 14px;
+    width:100%;
 
-  border: none;
-  border-radius: 8px;
+    margin-top:25px;
 
-  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    padding:13px;
 
-  color: white;
+    border:none;
 
-  font-size: 16px;
-  font-weight: bold;
+    border-radius:6px;
 
-  cursor: pointer;
+    background:#2563eb;
 
-  transition: 0.3s;
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 }
 
-#register-btn:hover {
-  transform: translateY(-2px);
+#register-btn:hover{
 
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+    background:#1d4ed8;
+
 }
 
-.container a button {
-  width: 100%;
+#register-btn:disabled{
 
-  margin-top: 20px;
+    background:#9ca3af;
 
-  padding: 14px;
+    cursor:not-allowed;
 
-  border: none;
-  border-radius: 8px;
+}
+/* ===========================
+   LANDING / SUCCESS / LOGOUT
+=========================== */
 
-  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+.page-icon{
 
-  color: white;
+    font-size:70px;
 
-  font-size: 16px;
-  font-weight: bold;
+    text-align:center;
 
-  cursor: pointer;
+    margin-bottom:20px;
 
-  transition: 0.3s;
 }
 
-.container a button:hover {
-  transform: translateY(-2px);
+.success{
 
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+    color:green;
+
+}
+
+.logout{
+
+    color:#dc2626;
+
+}
+
+.intro{
+
+    text-align:center;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+    color:#555;
+
+}
+
+.features{
+
+    background:#eef5ff;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+}
+
+.features h3{
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+.features p{
+
+    margin:10px 0;
+
+    font-size:15px;
+
 }

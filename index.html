@@ -1,78 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Strength Checker</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Security Checker</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-  <body>
-    <div class="container">
-      <h1>Password Strength Checker</h1>
+<body>
 
-      <!-- User Information -->
-      <input type="text" id="fullname" placeholder="Full Name" />
+<div class="container">
 
-      <input type="email" id="email" placeholder="Email Address" />
+    <h1>Password Security Checker</h1>
 
-      <input type="text" id="username" placeholder="Username" />
+    <!-- User Details -->
 
-      <!-- Password -->
-      <div class="input-group">
+    <input
+        type="text"
+        id="fullname"
+        placeholder="Full Name"
+    >
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Email Address"
+    >
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Username"
+    >
+
+    <!-- Password -->
+
+    <div class="input-group">
+
         <div class="password-wrapper">
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-          />
 
-          <button id="toggle-btn">Show</button>
+            <input
+                type="password"
+                id="password"
+                placeholder="Create Password"
+            >
+
+            <button id="toggle-btn">
+                Show
+            </button>
+
         </div>
 
-        <button id="copy-btn">⧉</button>
-      </div>
+        <button id="copy-btn">
+            ⧉
+        </button>
 
-      <!-- Confirm Password -->
-      <input
-        type="password"
-        id="confirm-password"
-        placeholder="Confirm Password"
-      />
+    </div>
 
-      <!-- Password Strength -->
-      <div class="strength-container">
-        <div class="strength-bar" id="strength-bar"></div>
-      </div>
+    <!-- Confirm Password -->
 
-      <p id="strength-text">Strength: None</p>
+    <div class="input-group">
 
-      <!-- Password Requirements -->
-      <div class="requirements">
-        <p id="length">✖ Minimum 8 characters</p>
-        <p id="uppercase">✖ Uppercase letter</p>
-        <p id="lowercase">✖ Lowercase letter</p>
-        <p id="number">✖ Number</p>
-        <p id="special">✖ Special character</p>
-      </div>
+        <div class="password-wrapper">
 
-      <!-- Security Tips -->
-      <div class="tips">
+            <input
+                type="password"
+                id="confirm-password"
+                placeholder="Confirm Password"
+            >
+
+            <button id="confirm-toggle-btn">
+                Show
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Strength Bar -->
+
+    <div class="strength-container">
+
+        <div
+            class="strength-bar"
+            id="strength-bar">
+        </div>
+
+    </div>
+
+    <p id="strength-text">
+        Strength: None
+    </p>
+
+    <!-- Security Analysis -->
+
+    <div class="analysis">
+
+        <h3>Security Analysis</h3>
+
+        <p id="analysis-message">
+            Start typing your password to receive security feedback.
+        </p>
+
+    </div>
+
+    <!-- Password Requirements -->
+
+    <div class="requirements">
+
+        <p id="length">
+            ✖ Minimum 8 characters
+        </p>
+
+        <p id="uppercase">
+            ✖ Uppercase letter
+        </p>
+
+        <p id="lowercase">
+            ✖ Lowercase letter
+        </p>
+
+        <p id="number">
+            ✖ Number
+        </p>
+
+        <p id="special">
+            ✖ Special character
+        </p>
+
+    </div>
+
+    <!-- Security Tips -->
+
+    <div class="tips">
+
         <h3>Security Tips</h3>
 
         <ul>
-          <li>Avoid using your name.</li>
-          <li>Do not use common passwords.</li>
-          <li>Use uppercase, lowercase, numbers and symbols.</li>
-          <li>Make your password at least 12 characters long.</li>
-        </ul>
-      </div>
 
-      <!-- Register Button -->
-      <button id="register-btn">Create Account</button>
+            <li>Avoid using your name.</li>
+
+            <li>Do not use common passwords.</li>
+
+            <li>Use uppercase, lowercase, numbers and symbols.</li>
+
+            <li>Make your password at least 12 characters long.</li>
+
+        </ul>
+
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <button id="register-btn">
+
+        Create Password
+
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>

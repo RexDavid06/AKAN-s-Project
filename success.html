@@ -3,28 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <div style="font-size: 60px; text-align: center">🛡️</div>
-    <h1>Registration Successful</h1>
-    <title>Registration Successful</title>
+    <title>Password Created Successfully</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
-      <h1>Registration Successful</h1>
+      <div class="page-icon success">🛡️</div>
 
-      <h2>✅</h2>
+      <h1>Password Created Successfully</h1>
 
-      <p>
-        Congratulations! Your password meets the recommended security
-        requirements.
+      <p class="intro">
+        Congratulations!
+
+        <br /><br />
+
+        Welcome,
+
+        <strong id="user-name"></strong>
+
+        <br /><br />
+
+        Your password has been securely saved for this demonstration.
+
+        <br /><br />
+
+        Remember to keep your password private and never share it.
       </p>
 
-      <br />
-
       <a href="landing.html">
-        <button>Back Home</button>
+        <button id="register-btn">Return Home</button>
       </a>
     </div>
   </body>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (user) {
+      document.getElementById("user-name").textContent = user.fullname;
+    }
+  </script>
 </html>
