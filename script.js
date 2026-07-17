@@ -296,7 +296,7 @@ function registerPassword() {
 
     }
 
-    // Calculate password strength
+    // Check password strength
     let score = 0;
 
     if (password.length >= 8) score++;
@@ -312,34 +312,20 @@ function registerPassword() {
 
     }
 
-    // Get existing users
+    // Get previously saved users
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check username
-    const usernameExists = users.some(user =>
-        user.username.toLowerCase() === username.value.toLowerCase()
-    );
+    // Check if password has been used before
+    const passwordExists = users.some(user => user.password === password);
 
-    if (usernameExists) {
+    if (passwordExists) {
 
-        alert("Username already exists.");
+        alert("This password has already been used. Please choose a different password.");
         return;
 
     }
 
-    // Check email
-    const emailExists = users.some(user =>
-        user.email.toLowerCase() === email.value.toLowerCase()
-    );
-
-    if (emailExists) {
-
-        alert("Email already exists.");
-        return;
-
-    }
-
-    // Save user
+    // Save new user
     const newUser = {
 
         fullname: fullName.value,
@@ -353,7 +339,7 @@ function registerPassword() {
 
     localStorage.setItem("users", JSON.stringify(users));
 
-    // Save current user for success page
+    // Save current user
     localStorage.setItem("currentUser", JSON.stringify(newUser));
 
     registerBtn.disabled = true;
