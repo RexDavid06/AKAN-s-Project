@@ -25,24 +25,33 @@
 
         <br /><br />
 
-        Your password has been securely saved for this demonstration.
+        Your password has been successfully analyzed, validated, and securely
+        saved for this demonstration.
 
         <br /><br />
 
-        Remember to keep your password private and never share it.
+        Remember to keep your password private and never share it with anyone.
       </p>
 
-      <a href="landing.html">
-        <button id="register-btn">Return Home</button>
-      </a>
+      <button id="register-btn" onclick="goHome()">
+        Return Home
+      </button>
     </div>
+
+    <script>
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (user) {
+        document.getElementById("user-name").textContent = user.fullname;
+      }
+
+      function goHome() {
+        // Remove only the current logged-in user
+        localStorage.removeItem("currentUser");
+
+        // Return to the landing page
+        window.location.href = "landing.html";
+      }
+    </script>
   </body>
-
-  <script>
-    const user = JSON.parse(localStorage.getItem("currentUser"));
-
-    if (user) {
-      document.getElementById("user-name").textContent = user.fullname;
-    }
-  </script>
 </html>
